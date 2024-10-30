@@ -7,9 +7,9 @@ class Space : Node {
   }
   
   public void Welcome () {
-    Console.WriteLine("You are now at "+name);
+    Console.WriteLine("Du er nu ved "+name);
     HashSet<string> paths = edges.Keys.ToHashSet();
-    Console.WriteLine("Current paths are:");
+    Console.WriteLine("Mulige veje:");
     foreach (String path in paths) {
       Console.WriteLine(" - "+path);
     }
