@@ -5,18 +5,18 @@ class World {
   Space entry;
   
   public World () {
-    Space entry    = new Space("Beehive");
-    Space corridor = new Space("Corridor");
-    Space cave     = new Space("Cave");
-    Space pit      = new Space("Darkest Pit");
-    Space outside  = new Space("Outside");
+    Space beehive    = new Space("Beehive");
+    Space have1 = new Space("Have1");
+    Space have2_0  = new Space("Have2_0");
+    Space have2_1  = new Space("Have2_1");
+    Space have2_2  = new Space("Have2_2");
     
-    entry.AddEdge("door", corridor);
-    corridor.AddEdge("door", cave);
-    cave.AddEdge("north", pit);
-    cave.AddEdge("south", outside);
-    pit.AddEdge("door", cave);
-    outside.AddEdge("door", cave);
+    beehive.AddEdge("beehive", corridor);
+    have1_0.AddEdge("have1", have1);
+    have2_0.AddEdge("have2_0", have2_0);
+    have2_1.AddEdge("have2_1", have2_1);
+    have2_2.AddEdge("have2_2", have2_2);
+    
     
     this.entry = entry;
   }
