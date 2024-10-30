@@ -11,7 +11,7 @@ class World {
     Space have2_1  = new Space("Have2_1");
     Space have2_2  = new Space("Have2_2");
     
-    beehive.AddEdge("beehive", corridor);
+    beehive.AddEdge("beehive", beehive);
     have1_0.AddEdge("have1", have1);
     have2_0.AddEdge("have2_0", have2_0);
     have2_1.AddEdge("have2_1", have2_1);
