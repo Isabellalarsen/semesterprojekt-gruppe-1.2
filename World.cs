@@ -11,12 +11,14 @@ class World {
     Space pit      = new Space("Darkest Pit");
     Space outside  = new Space("Outside");
     
+    
     entry.AddEdge("door", corridor);
     corridor.AddEdge("door", cave);
     cave.AddEdge("north", pit);
     cave.AddEdge("south", outside);
     pit.AddEdge("door", cave);
     outside.AddEdge("door", cave);
+    
     
     this.entry = entry;
   }

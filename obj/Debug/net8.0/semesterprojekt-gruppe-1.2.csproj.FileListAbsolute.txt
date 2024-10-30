@@ -1,0 +1,15 @@
+/workspaces/semesterprojekt-gruppe-1.2/bin/Debug/net8.0/semesterprojekt-gruppe-1.2
+/workspaces/semesterprojekt-gruppe-1.2/bin/Debug/net8.0/semesterprojekt-gruppe-1.2.deps.json
+/workspaces/semesterprojekt-gruppe-1.2/bin/Debug/net8.0/semesterprojekt-gruppe-1.2.runtimeconfig.json
+/workspaces/semesterprojekt-gruppe-1.2/bin/Debug/net8.0/semesterprojekt-gruppe-1.2.dll
+/workspaces/semesterprojekt-gruppe-1.2/bin/Debug/net8.0/semesterprojekt-gruppe-1.2.pdb
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/semesterprojekt-gruppe-1.2.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/semesterprojekt-gruppe-1.2.AssemblyInfoInputs.cache
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/semesterprojekt-gruppe-1.2.AssemblyInfo.cs
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/semesterprojekt-gruppe-1.2.csproj.CoreCompileInputs.cache
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/semesterprojekt-gruppe-1.2.sourcelink.json
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/semesterprojekt-gruppe-1.2.dll
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/refint/semesterprojekt-gruppe-1.2.dll
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/semesterprojekt-gruppe-1.2.pdb
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/semesterprojekt-gruppe-1.2.genruntimeconfig.cache
+/workspaces/semesterprojekt-gruppe-1.2/obj/Debug/net8.0/ref/semesterprojekt-gruppe-1.2.dll
