@@ -9,12 +9,14 @@ class Space : Node {
   public void Welcome () {
     Console.WriteLine("Du er nu ved "+name);
     HashSet<string> paths = edges.Keys.ToHashSet();
+    //Checks amount of paths and prints accordingly.
     if (paths.Count > 0) {
       Console.WriteLine("Mulige veje:");
       foreach (String path in paths) {
         Console.WriteLine(" - "+path);
       }
     }
+    //Not sure what to do here if player wins...
     else {
       Console.WriteLine("Ingen mulige veje. Skriv 'bye' for at afslutte.");
     }
