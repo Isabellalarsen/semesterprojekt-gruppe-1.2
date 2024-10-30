@@ -17,7 +17,7 @@ class Game {
   }
   
   static void Main (string[] args) {
-    Console.WriteLine("Welcome to the World of Zuul!");
+    Console.WriteLine("Welcome to the beehive!");
     
     InitRegistry();
     context.GetCurrent().Welcome();
