@@ -1,4 +1,4 @@
 #ignore any files in directory named obj.
 obj/
 bin/
-*.csproj
+semesterprojekt-gruppe-1.2.csproj
