@@ -9,10 +9,16 @@ class Space : Node {
   public void Welcome () {
     Console.WriteLine("Du er nu ved "+name);
     HashSet<string> paths = edges.Keys.ToHashSet();
-    Console.WriteLine("Mulige veje:");
-    foreach (String path in paths) {
-      Console.WriteLine(" - "+path);
+    if (paths.Count > 0) {
+      Console.WriteLine("Mulige veje:");
+      foreach (String path in paths) {
+        Console.WriteLine(" - "+path);
+      }
     }
+    else {
+      Console.WriteLine("Ingen mulige veje. Skriv 'bye' for at afslutte.");
+    }
+    
   }
   
   public void Goodbye () {
