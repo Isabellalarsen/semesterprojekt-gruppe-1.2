@@ -2,28 +2,29 @@
  */
 
 class World {
-  Space entry;
+  Space beehive;
   
   public World () {
-    Space entry    = new Space("Beehive");
-    Space corridor = new Space("Corridor");
-    Space cave     = new Space("Cave");
-    Space pit      = new Space("Darkest Pit");
-    Space outside  = new Space("Outside");
+    Space beehive = new Space("Beehive");
+    Space have1 = new Space("Have 1");
+    Space have2 = new Space("Have 2");
+	  Space have3 = new Space("Have 3");
+    Space have3_1 = new Space("Have 3_1");
+    Space have3_2  = new Space("Have 3_2");
     
-    entry.AddEdge("door", corridor);
-    corridor.AddEdge("door", cave);
-    cave.AddEdge("north", pit);
-    cave.AddEdge("south", outside);
-    pit.AddEdge("door", cave);
-    outside.AddEdge("door", cave);
+    beehive.AddEdge("have1", have1);
+    have1.AddEdge("have2", have2);
+    have2.AddEdge("have3", have3);
+    have3.AddEdge("have3_1", have3_1);
+    have3.AddEdge("have3_2", have3_2);
+    have3_2.AddEdge("have3_1", have3_1);
     
     
-    this.entry = entry;
+    this.beehive = beehive;
   }
   
   public Space GetEntry () {
-    return entry;
+    return beehive;
   }
 }
 
