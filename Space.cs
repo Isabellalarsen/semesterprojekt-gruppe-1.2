@@ -10,12 +10,13 @@ class Space : Node {
   }
   
   public void Welcome () {
-    Console.WriteLine("Du er nu ved "+name);
+    Console.WriteLine("---Du er nu ved "+name+ "---");
     Console.WriteLine(text);
     HashSet<string> paths = edges.Keys.ToHashSet();
+    //If you enter the specific room player picks up item.
     if(name=="have1"){
         nektar.HoldingItem = true;
-        Console.WriteLine("Du har nu samlet nektar op");
+        Console.WriteLine("***Du har nu samlet nektar op***");
       }
     
     //Checks amount of paths and prints accordingly.
