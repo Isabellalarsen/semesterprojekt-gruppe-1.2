@@ -2,6 +2,7 @@
  */
 
 class Space : Node {
+  Item nektar = new Item("nektar", false);
   public Space (String name) : base(name)
   {
   }
@@ -9,6 +10,11 @@ class Space : Node {
   public void Welcome () {
     Console.WriteLine("Du er nu ved "+name);
     HashSet<string> paths = edges.Keys.ToHashSet();
+    if(name=="have1"){
+        nektar.HoldingItem = true;
+        Console.WriteLine("Du har nu samlet nektar op");
+      }
+    
     //Checks amount of paths and prints accordingly.
     if (paths.Count > 0) {
       Console.WriteLine("Mulige veje:");
