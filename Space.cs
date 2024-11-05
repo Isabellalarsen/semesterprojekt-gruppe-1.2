@@ -2,13 +2,22 @@
  */
 
 class Space : Node {
-  public Space (String name) : base(name)
+  Item nektar = new Item("nektar", false);
+  string text;
+  public Space (String name, String text) : base(name)
   {
+	  this.text = text;
   }
   
   public void Welcome () {
     Console.WriteLine("Du er nu ved "+name);
+    Console.WriteLine(text);
     HashSet<string> paths = edges.Keys.ToHashSet();
+    if(name=="have1"){
+        nektar.HoldingItem = true;
+        Console.WriteLine("Du har nu samlet nektar op");
+      }
+    
     //Checks amount of paths and prints accordingly.
     if (paths.Count > 0) {
       Console.WriteLine("Mulige veje:");

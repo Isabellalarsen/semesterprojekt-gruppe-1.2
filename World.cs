@@ -3,15 +3,15 @@
 
 class World {
   Space beehive;
-  
+
   public World () {
 	// Adding rooms of type space
-    Space beehive = new Space("Beehive");
-    Space have1 = new Space("have1");
-    Space have2 = new Space("have2");
-	  Space have3 = new Space("have3");
-    Space have3_1 = new Space("have3_1");
-    Space have3_2  = new Space("have3_2");
+    Space beehive = new Space("beehive", "test");
+    Space have1 = new Space("have1", "test");
+    Space have2 = new Space("have2", "test");
+	  Space have3 = new Space("have3", "test");
+    Space have3_1 = new Space("have3_1", "test");
+    Space have3_2  = new Space("have3_2", "test");
 
 	  //Adding edges - currentroom.Addedge("name_of_next_room", next_room)
     beehive.AddEdge("have1", have1);
@@ -25,7 +25,7 @@ class World {
     have3_2.AddEdge("tilbage", have3);
     have3_2.AddEdge("have3_1", have3_1);
     
-    
+
     this.beehive = beehive;
   }
   
