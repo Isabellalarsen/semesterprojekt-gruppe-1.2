@@ -3,12 +3,15 @@
 
 class Space : Node {
   Item nektar = new Item("nektar", false);
-  public Space (String name) : base(name)
+  string text;
+  public Space (String name, String text) : base(name)
   {
+	  this.text = text;
   }
   
   public void Welcome () {
     Console.WriteLine("Du er nu ved "+name);
+    Console.WriteLine(text);
     HashSet<string> paths = edges.Keys.ToHashSet();
     if(name=="have1"){
         nektar.HoldingItem = true;
