@@ -25,7 +25,7 @@ class Space : Node {
         Console.WriteLine(" - "+path);
       }
     }
-    //Not sure what to do here if player wins...
+    //For the winning room, current text is placeholder.
     else {
       Console.WriteLine("Ingen mulige veje. Skriv 'bye' for at afslutte.");
     }
