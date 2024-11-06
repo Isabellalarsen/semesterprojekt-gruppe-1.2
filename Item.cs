@@ -9,12 +9,6 @@ public class Item
         name = name_val;
         holding_item = holding_item_val;
     }
-    // Method for getting name of item
-    // To retrieve name of item: itemName.GetName();
-    public string GetName()
-    {
-        return name;  
-    }
     // Properties of HoldingItem
     // To create new item: Item itemName = new Item("name", false);
     // To change item to being held : itemName.HoldingItem = true;
