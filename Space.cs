@@ -3,8 +3,8 @@
 
 class Space : Node {
   Item nektar = new Item("nektar", false);
-  string text;
-  public Space (String name, String text) : base(name)
+  private string text;
+  public Space (string name, string text) : base(name)
   {
 	  this.text = text;
   }
