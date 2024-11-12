@@ -14,9 +14,12 @@ class Space : Node {
     Console.WriteLine(text);
     HashSet<string> paths = edges.Keys.ToHashSet();
     //If you enter the specific room player picks up item.
+    // Only prints if it is set to true from false, if already true, it doesnt do anything
     if(name=="have1"){
+      if(nektar.HoldingItem == false){
         nektar.HoldingItem = true;
         Console.WriteLine("***Du har nu samlet nektar op***");
+      }
       }
     
     //Checks amount of paths and prints accordingly.
