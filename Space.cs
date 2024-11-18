@@ -31,7 +31,12 @@ class Space : Node {
   }
   public void Welcome () {
     Console.WriteLine("---Du er nu ved "+name+ "---");
-    Console.WriteLine(text);
+    //Only slowprints if first time in room, could be annoying if it did it again
+    if (!beenHere){
+    Print.SlowPrint(text);
+    } else{
+      Console.WriteLine(text);
+    }
     HashSet<string> paths = edges.Keys.ToHashSet();
     //If room has an item, and user doesnt have item
     //Set item to true and print
@@ -46,6 +51,7 @@ class Space : Node {
     if(question!=null && !beenHere){
       Console.WriteLine(question.QuestionText);
       Console.WriteLine("For at svare skal du trykke på a, b, c eller d");
+      // ReadKey() reads the next key pressed on keyboard
       char userAnswer = Console.ReadKey().KeyChar;
       Console.WriteLine();
       if(userAnswer == question.QuestionAnswer){
@@ -55,7 +61,7 @@ class Space : Node {
         Console.WriteLine($"Øv, det var ikke korrekt. Du har mistet {question.BeesLost} bier. Du har {bees} bier tilbage");
       }
     }
-    
+
     if (!beenHere) {
         SetBeenHere(true);
     }
