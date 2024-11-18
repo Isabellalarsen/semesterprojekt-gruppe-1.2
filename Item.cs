@@ -1,13 +1,17 @@
 public class Item
 {
     //Initializing name of item, and if item is being held.
-    public string name;
-    public bool holding_item;
+    private string name;
+    private bool holding_item;
 
     public Item(string name_val, bool holding_item_val)
     {
         name = name_val;
         holding_item = holding_item_val;
+    }
+    public string Name{
+        get { return name;}
+        set { name = value;}
     }
     // Properties of HoldingItem
     // To create new item: Item itemName = new Item("name", false);

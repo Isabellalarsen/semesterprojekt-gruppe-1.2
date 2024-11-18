@@ -23,7 +23,6 @@ class Space : Node {
     this.item = item;
   }
 
-  
   public void Welcome () {
     Console.WriteLine("---Du er nu ved "+name+ "---");
     Console.WriteLine(text);
@@ -34,7 +33,7 @@ class Space : Node {
     if(item!=null){
       if(!item.HoldingItem){
             item.HoldingItem = true; // Automatically pick up the item
-            Console.WriteLine("*** Du har nu samlet " + item.name + " op ***");
+            Console.WriteLine("*** Du har nu samlet " + item.Name + " op ***");
         }
       }
     
@@ -63,25 +62,6 @@ class Space : Node {
     beenHere = value;
   }
 
-  /* Hvis vi senere vil sætte item attributterne til private - kan vi lige snakke om
-  // If item doesnt exist, returns "No item" - Strings are not null-able so has to return something
-  public string GetItemName(){
-    return item?.name ?? "No item";
-  }
-  
-  // Kan tage imod null values. Hvis space ikke har en item, returneres false
-  public bool GetItemStatus(){
-    return item?.HoldingItem ?? false;
-  }
-  // Setter for item status.
-  public void SetItemStatus(bool status) {
-    if (item != null) {
-        item.HoldingItem = status;
-    } else {
-        Console.WriteLine("Der er ingen genstand her.");
-    }
-  }
-  */
   public override Space FollowEdge (string direction) {
     return (Space) (base.FollowEdge(direction));
   }
