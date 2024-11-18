@@ -10,7 +10,7 @@ class Space : Node {
   private Item? item;
 
     // If room has no item
-    public Space (string name, string text, bool beenHere) : base(name)
+  public Space (string name, string text, bool beenHere) : base(name)
   {
 	  this.text = text;
     this.beenHere = beenHere;
