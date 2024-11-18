@@ -6,7 +6,7 @@ class Space : Node {
   private string text;
   private bool beenHere;
 
-  // The Item type can be null
+  // The Item type can be null - Necessarry for later items involving Item types
   private Item? item;
 
     // If room has no item
@@ -54,13 +54,16 @@ class Space : Node {
   
   public void Goodbye () {
   }
+  // Getter to check for first time in room or not
   public bool GetBeenHere(string name){
     return beenHere;
   }
+  // Setter so we can set beenHere to true, when we enter room first time
   public void SetBeenHere(bool value){
     beenHere = value;
   }
 
+  /* Hvis vi senere vil sætte item attributterne til private - kan vi lige snakke om
   // If item doesnt exist, returns "No item" - Strings are not null-able so has to return something
   public string GetItemName(){
     return item?.name ?? "No item";
@@ -70,6 +73,7 @@ class Space : Node {
   public bool GetItemStatus(){
     return item?.HoldingItem ?? false;
   }
+  // Setter for item status.
   public void SetItemStatus(bool status) {
     if (item != null) {
         item.HoldingItem = status;
@@ -77,6 +81,7 @@ class Space : Node {
         Console.WriteLine("Der er ingen genstand her.");
     }
   }
+  */
   public override Space FollowEdge (string direction) {
     return (Space) (base.FollowEdge(direction));
   }
