@@ -2,24 +2,40 @@
  */
 
 class Space : Node {
-  Item nektar = new Item("nektar", false);
+
   private string text;
-  public Space (string name, string text) : base(name)
+  private bool beenHere;
+
+  // The Item type can be null
+  private Item? item;
+
+    // If room has no item
+    public Space (string name, string text, bool beenHere) : base(name)
   {
 	  this.text = text;
+    this.beenHere = beenHere;
   }
+  // Two contructors, one if space has item, one if not
+  public Space (string name, string text, bool beenHere, Item item) : base(name)
+  {
+	  this.text = text;
+    this.beenHere = beenHere;
+    this.item = item;
+  }
+
   
   public void Welcome () {
     Console.WriteLine("---Du er nu ved "+name+ "---");
     Console.WriteLine(text);
     HashSet<string> paths = edges.Keys.ToHashSet();
-    //If you enter the specific room player picks up item.
+    //If room has an item, and user doesnt have item
+    //Set item to true and print
     // Only prints if it is set to true from false, if already true, it doesnt do anything
-    if(name=="have1"){
-      if(nektar.HoldingItem == false){
-        nektar.HoldingItem = true;
-        Console.WriteLine("***Du har nu samlet nektar op***");
-      }
+    if(item!=null){
+      if(!item.HoldingItem){
+            item.HoldingItem = true; // Automatically pick up the item
+            Console.WriteLine("*** Du har nu samlet " + item.name + " op ***");
+        }
       }
     
     //Checks amount of paths and prints accordingly.
@@ -38,7 +54,29 @@ class Space : Node {
   
   public void Goodbye () {
   }
+  public bool GetBeenHere(string name){
+    return beenHere;
+  }
+  public void SetBeenHere(bool value){
+    beenHere = value;
+  }
+
+  // If item doesnt exist, returns "No item" - Strings are not null-able so has to return something
+  public string GetItemName(){
+    return item?.name ?? "No item";
+  }
   
+  // Kan tage imod null values. Hvis space ikke har en item, returneres false
+  public bool GetItemStatus(){
+    return item?.HoldingItem ?? false;
+  }
+  public void SetItemStatus(bool status) {
+    if (item != null) {
+        item.HoldingItem = status;
+    } else {
+        Console.WriteLine("Der er ingen genstand her.");
+    }
+  }
   public override Space FollowEdge (string direction) {
     return (Space) (base.FollowEdge(direction));
   }

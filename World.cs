@@ -10,13 +10,17 @@ class World {
     string beehiveText = File.ReadAllText(@"beehive.txt");
     string have1Text = File.ReadAllText(@"have1.txt");
 
-  	// Adding rooms of type space
-    Space beehive = new Space("beehive", beehiveText);
-    Space have1 = new Space("have1", have1Text);
-    Space have2 = new Space("have2", "test");
-	  Space have3 = new Space("have3", "test");
-    Space have3_1 = new Space("have3_1", "test");
-    Space have3_2  = new Space("have3_2", "test");
+    // Items
+    Item nektar = new Item("nektar", false);
+    Item nøgle1 = new Item("nøgle1", false);
+  	// Adding rooms of type space (name, textofroom, beenHere, item)
+    // Ignore item, if room has no items
+    Space beehive = new Space("beehive", beehiveText, false);
+    Space have1 = new Space("have1", have1Text, false, nektar);
+    Space have2 = new Space("have2", "test", false, nøgle1);
+	  Space have3 = new Space("have3", "test", false);
+    Space have3_1 = new Space("have3_1", "test", false);
+    Space have3_2  = new Space("have3_2", "test", false);
 
 	  //Adding edges - currentroom.Addedge("name_of_next_room", next_room)
     beehive.AddEdge("have1", have1);
