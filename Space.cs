@@ -2,11 +2,10 @@
  */
 
 class Space : Node {
-
+  private int bees = 100;
   private string text;
   private bool beenHere;
-
-  // The Item type can be null - Necessarry for later items involving Item types
+  // The Item and question types can be null - as some of the constructors dont have Item and Question
   private Item? item;
   private Question? question;
   // If room has no item or question
@@ -20,7 +19,7 @@ class Space : Node {
   {
 	  this.text = text;
     this.beenHere = beenHere;
-      this.question = question;
+    this.question = question;
   }
   // If room has Item and question
   public Space (string name, string text, bool beenHere, Question question, Item item) : base(name)
@@ -43,7 +42,23 @@ class Space : Node {
             Console.WriteLine("*** Du har nu samlet " + item.Name + " op ***");
         }
       }
+    // If room has a question do the following
+    if(question!=null && !beenHere){
+      Console.WriteLine(question.QuestionText);
+      Console.WriteLine("For at svare skal du trykke på a, b, c eller d");
+      char userAnswer = Console.ReadKey().KeyChar;
+      Console.WriteLine();
+      if(userAnswer == question.QuestionAnswer){
+        Console.WriteLine($"Korrekt! Du har formået at redde {question.BeesLost} bier!");
+      } else{
+        bees = bees - question.BeesLost;
+        Console.WriteLine($"Øv, det var ikke korrekt. Du har mistet {question.BeesLost} bier. Du har {bees} bier tilbage");
+      }
+    }
     
+    if (!beenHere) {
+        SetBeenHere(true);
+    }
     //Checks amount of paths and prints accordingly.
     if (paths.Count > 0) {
       Console.WriteLine("Mulige veje:");

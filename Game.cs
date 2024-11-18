@@ -2,6 +2,11 @@
  */
 
 class Game {
+  private int bees = 100;
+  public int Bees {
+      get { return bees; }
+      set { bees = value; }
+}
   static World    world    = new World();
   static Context  context  = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();

@@ -13,7 +13,7 @@ class World {
     // Items
     Item nektar = new Item("nektar", false);
     Item nøgle1 = new Item("nøgle1", false);
-    // (QuestionText, QuestionAnswer) QuestionAnswer must be in ' ' and only one char
+    // (QuestionText, QuestionAnswer, BeesLost) QuestionAnswer must be in ' ' and only one char
     Question question1 = new Question("Hvad er 2+2? a: 3, b: 4, c: 5, d:100", 'b', 10);
     Question question2 = new Question("Hvad er 2+2? a: 3, b: 4, c: 5, d:100", 'b', 10);
     // Adding rooms of type space (name, textofroom, beenHere, item)
