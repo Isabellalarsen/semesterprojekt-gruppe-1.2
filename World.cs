@@ -14,12 +14,13 @@ class World {
     Item nektar = new Item("nektar", false);
     Item nøgle1 = new Item("nøgle1", false);
     // (QuestionText, QuestionAnswer) QuestionAnswer must be in ' ' and only one char
-    Question question1 = new Question("Hvad er 2+2? a: 3, b: 4, c: 5, d:100", 'b');
+    Question question1 = new Question("Hvad er 2+2? a: 3, b: 4, c: 5, d:100", 'b', 10);
+    Question question2 = new Question("Hvad er 2+2? a: 3, b: 4, c: 5, d:100", 'b', 10);
     // Adding rooms of type space (name, textofroom, beenHere, item)
     // Ignore item, if room has no items
     Space beehive = new Space("beehive", beehiveText, false);
-    Space have1 = new Space("have1", have1Text, false, nektar);
-    Space have2 = new Space("have2", "test", false, nøgle1);
+    Space have1 = new Space("have1", have1Text, false, question1, nektar);
+    Space have2 = new Space("have2", "test", false, question2, nøgle1);
 	  Space have3 = new Space("have3", "test", false);
     Space have3_1 = new Space("have3_1", "test", false);
     Space have3_2  = new Space("have3_2", "test", false);

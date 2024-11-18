@@ -8,21 +8,28 @@ class Space : Node {
 
   // The Item type can be null - Necessarry for later items involving Item types
   private Item? item;
-
-    // If room has no item
+  private Question? question;
+  // If room has no item or question
   public Space (string name, string text, bool beenHere) : base(name)
   {
 	  this.text = text;
     this.beenHere = beenHere;
   }
-  // Two contructors, one if space has item, one if not
-  public Space (string name, string text, bool beenHere, Item item) : base(name)
+    // If room has no item but has a question
+  public Space (string name, string text, bool beenHere, Question question) : base(name)
+  {
+	  this.text = text;
+    this.beenHere = beenHere;
+      this.question = question;
+  }
+  // If room has Item and question
+  public Space (string name, string text, bool beenHere, Question question, Item item) : base(name)
   {
 	  this.text = text;
     this.beenHere = beenHere;
     this.item = item;
+    this.question = question;
   }
-
   public void Welcome () {
     Console.WriteLine("---Du er nu ved "+name+ "---");
     Console.WriteLine(text);
