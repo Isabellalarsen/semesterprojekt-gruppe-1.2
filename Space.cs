@@ -50,7 +50,7 @@ class Space : Node {
     // If room has a question do the following
     if(question!=null && !beenHere){
       Console.WriteLine(question.QuestionText);
-      Console.WriteLine("For at svare skal du trykke på a, b, c eller d");
+      Console.WriteLine("For at svare skal du trykke på a, b, c eller d.");
       // ReadKey() reads the next key pressed on keyboard
       char userAnswer = Console.ReadKey().KeyChar;
       Console.WriteLine();
