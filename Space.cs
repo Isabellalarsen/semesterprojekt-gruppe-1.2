@@ -1,5 +1,6 @@
 /* Space class for modeling spaces (rooms, caves, ...)
  */
+using System.Runtime.InteropServices;
 
 class Space : Node {
   private int bees = 100;
@@ -44,13 +45,13 @@ class Space : Node {
     if(item!=null){
       if(!item.HoldingItem){
             item.HoldingItem = true; // Automatically pick up the item
-            Console.WriteLine("*** Du har nu samlet " + item.Name + " op ***");
+            Console.WriteLine($"*** Du har nu samlet {item.Name}  op ***");
         }
       }
     // If room has a question do the following
     if(question!=null && !beenHere){
       Console.WriteLine(question.QuestionText);
-      Console.WriteLine("For at svare skal du trykke på a, b, c eller d.");
+      Console.WriteLine("For at svare skal du trykke på a, b, c eller d");
       // ReadKey() reads the next key pressed on keyboard
       char userAnswer = Console.ReadKey().KeyChar;
       Console.WriteLine();
@@ -76,7 +77,6 @@ class Space : Node {
     else {
       Console.WriteLine("Ingen mulige veje. Skriv 'bye' for at afslutte.");
     }
-    
   }
   
   public void Goodbye () {
