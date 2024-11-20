@@ -6,7 +6,7 @@ For at redde din bi-hær skal du bevæge dig gennem kolonihaver.
 Hvis du vil bevæge dig til en bikube, skal du skrive go bikube. 
 Du får at vide hvilke rum du kan bevæge dig ind i, når du får brug for det.
 Du skal tage valg eller svare på spørgsmål, der kan redde din bi-hær.
-For at gå til et rum skal du skrive "go rumnavn". 
+For at gå til en ny have eller nyt sted skriv "go stednavn".
 For at svare på disse spørgsmål skal du trykke “a, b, c eller d”.
 Held og lykke!
 
