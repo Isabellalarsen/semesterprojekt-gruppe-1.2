@@ -16,7 +16,7 @@ class Context {
   public void Transition (string direction) {
     Space next = current.FollowEdge(direction);
     if (next==null) {
-      Console.WriteLine("Du går forvirret rundt og leder efter en udvej '"+direction+"'. I sidste ende giver du op 😩");
+      Console.WriteLine("Prøv igen med et rum der findes");
     } else {
       current.Goodbye();
       current = next;

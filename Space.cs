@@ -99,7 +99,7 @@ class Space : Node {
     beenHere = value;
   }
 
-  public override Space FollowEdge (string direction) {
-    return (Space) (base.FollowEdge(direction));
+  public override Space? FollowEdge (string direction) {
+    return (Space?) (base.FollowEdge(direction));
   }
 }
