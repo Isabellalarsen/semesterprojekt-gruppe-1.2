@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 class Space : Node {
   static World    world    = new World();
   static Item[] pocket = new Item[5];
-  static Inventory inventory = new Inventory("taske", pocket);
+  static Inventory inventory = new Inventory("lomme", pocket);
   private int bees = 100;
   private string text;
   private bool beenHere;

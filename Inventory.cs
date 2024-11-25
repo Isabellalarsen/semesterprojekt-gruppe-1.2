@@ -32,10 +32,10 @@ public void RemoveItem(Item? removeItem){
 
 //print af pocket - direkte
 public void PrintInventory(Item[] pocket){
-  Console.WriteLine("Din lomme indeholder: ");
+  Print.SlowPrint($"Din {name} indeholder: ");
     for(int i = 0; i < pocket.Length; i++){
       if(pocket[i] != null){
-        Console.WriteLine($"  *{pocket[i].Name}");
+        Print.SlowPrint($"  *{pocket[i].Name}");
       }
     }
   }
