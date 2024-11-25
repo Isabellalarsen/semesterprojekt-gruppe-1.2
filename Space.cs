@@ -31,6 +31,7 @@ class Space : Node {
     this.question = question;
   }
   public void Welcome () {
+
     Console.WriteLine("---Du er nu ved "+name+ "---");
     //Only slowprints if first time in room, could be annoying if it did it again
     if (!beenHere){
@@ -45,7 +46,7 @@ class Space : Node {
     if(item!=null){
       if(!item.HoldingItem){
             item.HoldingItem = true; // Automatically pick up the item
-            Console.WriteLine($"*** Du har nu samlet {item.Name}  op ***");
+            Console.WriteLine("*** Du har nu samlet " + item.Name + " op ***");
         }
       }
     // If room has a question do the following
