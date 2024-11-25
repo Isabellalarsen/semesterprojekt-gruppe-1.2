@@ -2,6 +2,7 @@
  */
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Transactions;
 
 class Space : Node {
   static World    world    = new World();
@@ -26,6 +27,13 @@ class Space : Node {
     this.beenHere = beenHere;
     this.question = question;
   }
+
+  public Space(string name, string text, bool beenHere, Item item) : base(name)
+  {
+    this.text = text;
+    this.beenHere = beenHere;
+    this.item = item;
+  }
   // If room has Item and question
   public Space (string name, string text, bool beenHere, Question question, Item item) : base(name)
   {
@@ -34,6 +42,7 @@ class Space : Node {
     this.item = item;
     this.question = question;
   }
+  
   public void Welcome () {
 
 
@@ -100,6 +109,14 @@ class Space : Node {
   }
 
   public override Space? FollowEdge (string direction) {
-    return (Space?) (base.FollowEdge(direction));
+    if(item == null || question == null || item.HoldingItem == true){
+      return (Space?) (base.FollowEdge(direction));
+    }
+    else
+    {
+      Console.WriteLine($"{direction} er låst, du mangler at samle en genstand op for at komme herind!");
+      return FollowEdge(name);
+    }
   }
 }
+

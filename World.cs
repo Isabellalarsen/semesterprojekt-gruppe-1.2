@@ -11,6 +11,7 @@ class World {
     string have1Text = File.ReadAllText(@"./stories/have1.txt");
 
     // Items
+    Item vildBlomst = new Item("Vild blomst", false);
     Item nektar = new Item("nektar", false);
     Item nøgle1 = new Item("nøgle1", false);
 
@@ -20,23 +21,23 @@ class World {
     // Adding rooms of type space (name, textofroom, beenHere, item)
     // Ignore item, if room has no items
     Space beehive = new Space("beehive", beehiveText, false);
-    Space have1 = new Space("have1", have1Text, false, question1, nektar);
-    Space have2 = new Space("have2", "test", false, question2, nøgle1);
-	  Space have3 = new Space("have3", "test", false);
-    Space have3_1 = new Space("have3_1", "test", false);
+    Space aviayashave = new Space("aviayashave", have1Text, false, question1);
+    Space aviayastree = new Space("aviayastree", "test", false, vildBlomst);
+	  Space fruHansen = new Space("fruHansen", "test", false, question2, vildBlomst);
+    Space fruHansenDrivhus = new Space("fruHansenDrivhus", "test", false, nøgle1);
     Space have3_2  = new Space("have3_2", "test", false);
 
 	  //Adding edges - currentroom.Addedge("name_of_next_room", next_room)
-    beehive.AddEdge("have1", have1);
-    have1.AddEdge("have2", have2);
-    have2.AddEdge("tilbage", have1);
-    have2.AddEdge("have3", have3);
-	  // have3 has 2 edges, so it can move to 2 rooms
-    have3.AddEdge("tilbage", have2);
-    have3.AddEdge("have3_1", have3_1);
-    have3.AddEdge("have3_2", have3_2);
-    have3_2.AddEdge("tilbage", have3);
-    have3_2.AddEdge("have3_1", have3_1);
+    beehive.AddEdge("have1", aviayashave);
+    aviayashave.AddEdge("aviayastree", aviayastree);
+    aviayashave.AddEdge("fruhansen", fruHansen);
+    aviayastree.AddEdge("tilbage", aviayashave);
+	  // fruHansen has 2 edges, so it can move to 2 rooms
+    fruHansen.AddEdge("tilbage", aviayastree);
+    fruHansen.AddEdge("fruHansenDrivhus", fruHansenDrivhus);
+    fruHansen.AddEdge("have3_2", have3_2);
+    have3_2.AddEdge("tilbage", fruHansen);
+    have3_2.AddEdge("fruHansenDrivhus", fruHansenDrivhus);
 
     this.beehive = beehive;
   }
