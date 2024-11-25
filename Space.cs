@@ -1,8 +1,12 @@
 /* Space class for modeling spaces (rooms, caves, ...)
  */
+using System.Net;
 using System.Runtime.InteropServices;
 
 class Space : Node {
+  static World    world    = new World();
+  static Item[] pocket = new Item[5];
+  static Inventory inventory = new Inventory("taske", pocket);
   private int bees = 100;
   private string text;
   private bool beenHere;
@@ -32,6 +36,7 @@ class Space : Node {
   }
   public void Welcome () {
 
+
     Console.WriteLine("---Du er nu ved "+name+ "---");
     //Only slowprints if first time in room, could be annoying if it did it again
     if (!beenHere){
@@ -46,9 +51,12 @@ class Space : Node {
     if(item!=null){
       if(!item.HoldingItem){
             item.HoldingItem = true; // Automatically pick up the item
-            Console.WriteLine("*** Du har nu samlet " + item.Name + " op ***");
-        }
-      }
+            inventory.AddItem(item);
+            Console.WriteLine($"*** Du har nu samlet {item.Name} op ***");
+            inventory.PrintInventory(pocket);
+          }
+    }
+  
     // If room has a question do the following
     if(question!=null && !beenHere){
       Console.WriteLine(question.QuestionText);

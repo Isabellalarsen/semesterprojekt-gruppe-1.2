@@ -13,6 +13,7 @@ class World {
     // Items
     Item nektar = new Item("nektar", false);
     Item nøgle1 = new Item("nøgle1", false);
+
     // (QuestionText, QuestionAnswer, BeesLost) QuestionAnswer must be in ' ' and only one char
     Question question1 = new Question("Hvad er 2+2?\n a: 3\n b: 4\n c: 5\n d:100", 'b', 10);
     Question question2 = new Question("Hvad er 2+2? a: 3, b: 4, c: 5, d:100", 'b', 10);
@@ -36,7 +37,6 @@ class World {
     have3.AddEdge("have3_2", have3_2);
     have3_2.AddEdge("tilbage", have3);
     have3_2.AddEdge("have3_1", have3_1);
-    
 
     this.beehive = beehive;
   }
