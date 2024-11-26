@@ -8,7 +8,7 @@ class World {
 
     //Pulling text from textfiles and stores it in the string variable. 
     string beehiveText = File.ReadAllText(@"./stories/beehive.txt");
-    string have1Text = File.ReadAllText(@"./stories/have1.txt");
+    string have1Text = File.ReadAllText(@"./stories/aviaya.txt");
 
     // Items
     Item vildBlomst = new Item("Vild blomst", false);
