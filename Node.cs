@@ -18,11 +18,9 @@ public class Node {
   }
   
   public virtual Node? FollowEdge (string direction) {
-    if(edges.ContainsKey(direction) )
+    if(edges.ContainsKey(direction))
     {
-      if(item == null || question == null || item.HoldingItem == true){
         return edges[direction];
-      }
     } 
     else
     {

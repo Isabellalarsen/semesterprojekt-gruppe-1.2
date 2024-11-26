@@ -21,7 +21,7 @@ public void AddItem(Item newItem){
 
 //Metode til at fjerne ting fra tasken - ved ikke om det er brugebart endnu
 // Hvis vi vil fjernes mere end 1 item, skal der inddrages et break.
-public void RemoveItem(Item? removeItem){
+public void RemoveItem(Item removeItem){
   for(int i = 0; i < pocket.Length; i++){
     if(pocket[i] == removeItem){
       pocket[i] = null;

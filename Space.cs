@@ -109,7 +109,11 @@ class Space : Node {
   }
 
   public override Space? FollowEdge (string direction) {
-    if(item == null || question == null || item.HoldingItem == true){
+    Space? nextroom = (Space?) (base.FollowEdge(direction));
+    if (nextroom == null) {
+      return null;
+    }
+    if (nextroom.item == null || nextroom.question == null || nextroom.item.HoldingItem == true){
       return (Space?) (base.FollowEdge(direction));
     }
     else

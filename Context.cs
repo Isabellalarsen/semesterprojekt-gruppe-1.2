@@ -14,7 +14,7 @@ class Context {
   }
   
   public void Transition (string direction) {
-    Space next = current.FollowEdge(direction);
+    Space? next = current.FollowEdge(direction);
     if (next==null) {
       Console.WriteLine("Prøv igen med et rum der findes");
     } else {
