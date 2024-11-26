@@ -94,16 +94,16 @@ class Space : Node {
     //For the winning room, current text is placeholder.
     else {
       if (bees < 25) {
-        Console.WriteLine("hej");
+        Console.WriteLine(File.ReadAllText(@"./stories/lessthan25.txt"));
       }
       else if(bees < 50) {
-        Console.WriteLine("med");
+        Console.WriteLine(File.ReadAllText(@"./stories/lessthan50.txt"));
       }
       else if (bees < 75) {
-        Console.WriteLine("Dig");
+        Console.WriteLine(File.ReadAllText(@"./stories/lessthan75.txt"));
       }
       else {
-        Console.WriteLine("YEAH DU VANDT!");
+        Console.WriteLine(File.ReadAllText(@"./stories/100.txt"));
       }
     }
   }
