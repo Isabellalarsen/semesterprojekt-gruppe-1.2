@@ -93,7 +93,18 @@ class Space : Node {
     }
     //For the winning room, current text is placeholder.
     else {
-      Console.WriteLine("Ingen mulige veje. Skriv 'bye' for at afslutte.");
+      if (bees < 25) {
+        Console.WriteLine("hej");
+      }
+      else if(bees < 50) {
+        Console.WriteLine("med");
+      }
+      else if (bees < 75) {
+        Console.WriteLine("Dig");
+      }
+      else {
+        Console.WriteLine("YEAH DU VANDT!");
+      }
     }
   }
   
