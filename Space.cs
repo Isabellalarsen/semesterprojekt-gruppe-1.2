@@ -120,6 +120,7 @@ class Space : Node {
   }
 
   public override Space? FollowEdge (string direction) {
+    direction = direction.ToLower();
     Space? nextroom = (Space?) (base.FollowEdge(direction));
     if (nextroom == null) {
       return null;
