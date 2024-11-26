@@ -8,7 +8,9 @@ class World {
 
     //Pulling text from textfiles and stores it in the string variable. 
     string beehiveText = File.ReadAllText(@"./stories/beehive.txt");
-    string have1Text = File.ReadAllText(@"./stories/aviaya.txt");
+    string aviayaText = File.ReadAllText(@"./stories/aviaya.txt");
+    string fruHansenText = File.ReadAllText(@"./stories/fruhansen.txt");
+    string solbergText = File.ReadAllText(@"./stories/solberg.txt");
 
     // Items
     Item vildBlomst = new Item("Vild blomst", false);
@@ -21,23 +23,25 @@ class World {
     // Adding rooms of type space (name, textofroom, beenHere, item)
     // Ignore item, if room has no items
     Space beehive = new Space("beehive", beehiveText, false);
-    Space aviayashave = new Space("aviayashave", have1Text, false, question1);
+    Space aviayashave = new Space("aviayashave", aviayaText, false, question1);
     Space aviayastree = new Space("aviayastree", "test", false, vildBlomst);
-	  Space fruHansen = new Space("fruHansen", "test", false, question2, vildBlomst);
-    Space fruHansenDrivhus = new Space("fruHansenDrivhus", "test", false, nøgle1);
-    Space have3_2  = new Space("have3_2", "test", false);
+	  Space fruHansen = new Space("fruHansen", fruHansenText, false, question2, vildBlomst);
+    Space fruHansenDrivhus = new Space("Drivhus", "test", false, nektar);
+    Space solberg  = new Space("solberg", solbergText, false, nektar);
+    Space terrasse = new Space("terrasse","test", false); 
 
 	  //Adding edges - currentroom.Addedge("name_of_next_room", next_room)
-    beehive.AddEdge("have1", aviayashave);
+    beehive.AddEdge("aviaya", aviayashave);
     aviayashave.AddEdge("aviayastree", aviayastree);
     aviayashave.AddEdge("fruhansen", fruHansen);
     aviayastree.AddEdge("tilbage", aviayashave);
 	  // fruHansen has 2 edges, so it can move to 2 rooms
     fruHansen.AddEdge("tilbage", aviayastree);
     fruHansen.AddEdge("fruHansenDrivhus", fruHansenDrivhus);
-    fruHansen.AddEdge("have3_2", have3_2);
-    have3_2.AddEdge("tilbage", fruHansen);
-    have3_2.AddEdge("fruHansenDrivhus", fruHansenDrivhus);
+    fruHansen.AddEdge("solberg", solberg);
+    fruHansenDrivhus.AddEdge("tilbage", fruHansen);
+    solberg.AddEdge("tilbage", fruHansen);
+    solberg.AddEdge("terrasse", terrasse);
 
     this.beehive = beehive;
   }
