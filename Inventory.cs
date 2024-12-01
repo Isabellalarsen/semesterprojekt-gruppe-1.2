@@ -2,7 +2,7 @@
 
 public class Inventory{
   private string name;
-  private Item[] pocket = new Item[5];//find ud af om det er brugebart senere
+  private Item?[] pocket = new Item[5];//find ud af om det er brugebart senere
 
 
 public Inventory(string name, Item[] pocket){
