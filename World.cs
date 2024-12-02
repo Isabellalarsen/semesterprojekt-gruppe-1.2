@@ -19,7 +19,7 @@ class World {
     Item vand = new Item("vand", false);
 
     // (QuestionText, QuestionAnswer, BeesLost) QuestionAnswer must be in ' ' and only one char
-    Question testsQuestion = new Question("Hvad er 2+2?\n a: 3\n b: 4\n c: 5\n d:100", 'b', 0);
+    Question testsQuestion = new Question("Hvad er 2+2?\n a: 3\n b: 4\n c: 5\n", 'b', 0);
     Question aviayaQuestion = new Question("Hvad er bedst for en bi?\n a: Nyslået græs?\n b: Eksotiske planter fra andre lande?\n c: Indfødte planter, der blomstrer på forskellige tidspunkter?    ", 'c', 25);
     Question fruHansenQuestion = new Question("Hvorfor er det vigtigt at undgå brug af pesticider i haver?\n a: Fordi pesticider dræber bier og andre gavlige insekter\n b: Fordi pesticider gør planterne mindre grønne\n c: Fordi bier ikke kan lide lugten af pesticider  ", 'a', 25);
     Question solbergQuestion = new Question("Hvilken type vand foretrækker bier i sommervarmen?\n a: Friskt, koldt og rent vand\n b: Surt, og smålugtet vand med jord, mos og blade\n c: Vand med isterninger og citron ", 'b', 25);

@@ -14,6 +14,7 @@ class Space : Node {
   // The Item and question types can be null - as some of the constructors dont have Item and Question
   private Item? item;
   private Question? question;
+  
   // If room has no item or question
   public Space (string name, string text, bool beenHere) : base(name)
   {
@@ -68,13 +69,21 @@ class Space : Node {
     // If room has a question do the following
     if(question!=null && !beenHere){
       Console.WriteLine(question.QuestionText);
-      Console.WriteLine("For at svare skal du trykke på a, b, c eller d");
+      Console.WriteLine("For at svare skal du trykke på a, b eller c");
       // ReadKey() reads the next key pressed on keyboard
-      char userAnswer = Console.ReadKey().KeyChar;
-      Console.WriteLine();
-      if(userAnswer == question.QuestionAnswer){
+      char userAnswer;
+      do {
+        userAnswer = Console.ReadKey().KeyChar;
+        Console.WriteLine();
+        if (userAnswer !='a'&& userAnswer !='b'&& userAnswer !='c'){
+          Console.WriteLine("Prøv med valgmulighederne a, b eller c");
+        }
+      }
+      while(userAnswer !='a'&& userAnswer !='b'&& userAnswer !='c');
+      if (userAnswer == question.QuestionAnswer){      
         Console.WriteLine($"Korrekt! Du har formået at redde {question.BeesLost} bier!");
-      } else {
+      }  
+      else {
         bees.Bees = bees.Bees - question.BeesLost;
         Console.WriteLine($"Øv, det var ikke korrekt. Du har mistet {question.BeesLost} bier. Du har {bees.Bees} bier tilbage");
       }
