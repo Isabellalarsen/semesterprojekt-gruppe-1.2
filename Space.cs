@@ -6,9 +6,9 @@ using System.Transactions;
 
 class Space : Node {
   static World    world    = new World();
+  static BeeCounter bees = new BeeCounter();
   static Item[] pocket = new Item[5];
   static Inventory inventory = new Inventory("lomme", pocket);
-  private int bees = 100;
   private string text;
   private bool beenHere;
   // The Item and question types can be null - as some of the constructors dont have Item and Question
@@ -45,7 +45,6 @@ class Space : Node {
   
   public void Welcome () {
 
-
     Console.WriteLine("---Du er nu ved "+name+ "---");
     //Only slowprints if first time in room, could be annoying if it did it again
     if (!beenHere){
@@ -75,9 +74,9 @@ class Space : Node {
       Console.WriteLine();
       if(userAnswer == question.QuestionAnswer){
         Console.WriteLine($"Korrekt! Du har formået at redde {question.BeesLost} bier!");
-      } else{
-        bees = bees - question.BeesLost;
-        Console.WriteLine($"Øv, det var ikke korrekt. Du har mistet {question.BeesLost} bier. Du har {bees} bier tilbage");
+      } else {
+        bees.Bees = bees.Bees - question.BeesLost;
+        Console.WriteLine($"Øv, det var ikke korrekt. Du har mistet {question.BeesLost} bier. Du har {bees.Bees} bier tilbage");
       }
     }
 
@@ -93,13 +92,13 @@ class Space : Node {
     }
     //For the winning room, current text is placeholder.
     else {
-      if (bees < 25) {
+      if (bees.Bees < 25) {
         Console.WriteLine(File.ReadAllText(@"./stories/lessthan25.txt"));
       }
-      else if(bees < 50) {
+      else if(bees.Bees < 50) {
         Console.WriteLine(File.ReadAllText(@"./stories/lessthan50.txt"));
       }
-      else if (bees < 75) {
+      else if (bees.Bees < 75) {
         Console.WriteLine(File.ReadAllText(@"./stories/lessthan75.txt"));
       }
       else {

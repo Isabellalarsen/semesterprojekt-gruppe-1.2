@@ -3,7 +3,6 @@ public class Item
     //Initializing name of item, and if item is being held.
     private string name;
     private bool holding_item;
-
     public Item(string name_val, bool holding_item_val)
     {
         name = name_val;
