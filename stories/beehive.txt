@@ -1,12 +1,13 @@
 Du er lederbien Bobbi, en modig bi fra en travl bikoloni midt i en kolonihave. Livet har været skønt med blomster i massevis og din store bislægt omkring dig - men pludselig! Du hører en uhyggelig brummen fra en bulldoser, der ruller ind og planlægger at rydde hele haven for at bygge noget nyt.
 
-Din mission: Red din koloni/hær/familie på 100 bier og find et nyt sted at bygge jer et hjem. På din rejse vil du møde udfordringer og svære valg - men hvis du er smart, kan du måske sikre din kolonis fremtid!
+Din mission: Red din koloni på 100 bier og find et nyt sted at bygge jeres nye hjem. På din rejse vil du møde udfordringer og svære valg - men hvis du er smart, kan du måske sikre din kolonis fremtid!
 
-For at redde din bi-hær skal du bevæge dig gennem kolonihaver.
-Hvis du vil bevæge dig til en bikube, skal du skrive go bikube. 
-Du får at vide hvilke rum du kan bevæge dig ind i, når du får brug for det.
-Du skal tage valg eller svare på spørgsmål, der kan redde din bi-hær.
+For at redde din koloni skal du bevæge dig gennem kolonihaven.
 For at gå til en ny have eller nyt sted skriv "go stednavn".
-For at svare på disse spørgsmål skal du trykke “a, b, c eller d”.
+Du får at vide hvilke rum du kan bevæge dig ind i, når du får brug for det.
+Du skal tage valg eller svare på spørgsmål, der kan redde din koloni.
+For at svare på disse spørgsmål skal du trykke “a, b, eller c”.
+Nogle af haverne er låst, og for at låse dem op skal du under din mission samle brugebare genstande op.
 Held og lykke!
 
+Besvar dette testspørgsmål for at afprøve at svare på et spørgsmål:  

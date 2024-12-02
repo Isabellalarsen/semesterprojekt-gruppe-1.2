@@ -81,7 +81,7 @@ class Space : Node {
       }
       while(userAnswer !='a'&& userAnswer !='b'&& userAnswer !='c');
       if (userAnswer == question.QuestionAnswer){      
-        Console.WriteLine($"Korrekt! Du har formået at redde {question.BeesLost} bier!");
+        Console.WriteLine("Korrekt! Du har ikke mistet nogen bier!");
       }  
       else {
         bees.Bees = bees.Bees - question.BeesLost;
@@ -138,7 +138,7 @@ class Space : Node {
     }
     else
     {
-      Console.WriteLine($"{direction} er låst, du mangler at samle en genstand op for at komme herind!");
+      Console.WriteLine($"Haven tilhørende {direction} er låst, du mangler at samle en genstand op for at komme herind!");
       return FollowEdge(name);
     }
   }
