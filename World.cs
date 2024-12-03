@@ -57,7 +57,7 @@ class World {
     aviayasJordbund.AddEdge("tilbage", aviayashave);
 
 	  // fruHansen has 2 edges, so it can move to 2 rooms
-    fruHansen.AddEdge("tilbage", aviayasJordbund);
+    fruHansen.AddEdge("tilbage", aviayashave);
     fruHansen.AddEdge("drivhus", fruHansensDrivhus);
     fruHansen.AddEdge("solberg", solberg);
 
