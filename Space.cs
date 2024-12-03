@@ -97,7 +97,7 @@ class Space : Node {
     }
 
     if (!beenHere) {
-        SetBeenHere(true);
+        beenHere = true;
     }
     //Checks amount of paths and prints accordingly.
     if (paths.Count > 0 && bees.Bees > 0) {
@@ -127,15 +127,6 @@ class Space : Node {
   
   public void Goodbye () {
   }
-  // Getter to check for first time in room or not
-  public bool GetBeenHere(string name){
-    return beenHere;
-  }
-  // Setter so we can set beenHere to true, when we enter room first time
-  public void SetBeenHere(bool value){
-    beenHere = value;
-  }
-
   public override Space? FollowEdge (string direction) {
     direction = direction.ToLower();
     Space? nextroom = (Space?) (base.FollowEdge(direction));
