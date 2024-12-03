@@ -108,6 +108,7 @@ class Space : Node {
     }
     //For the winning room, current text is placeholder.
     else {
+      Console.WriteLine($"Du har {bees.Bees} bier tilbage\n");
       if (bees.Bees < 25) {
         Console.WriteLine(File.ReadAllText(@"./stories/lessthan25.txt"));
       }
