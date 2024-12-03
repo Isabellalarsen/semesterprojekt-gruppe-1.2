@@ -1,6 +1,3 @@
-
-Her er en version af din tekst, hvor lix-tallet er reduceret til under 35, og stavningen er korrekt:
-
 Du er lederbien Bobbi, en modig bi fra en travl bikoloni i en kolonihave. Livet har været dejligt med blomster i massevis og din store bislægt omkring dig. Men pludselig! Du hører en uhyggelig brummen fra en bulldozer, der ruller ind og vil rydde hele haven for at bygge noget nyt.
 
 Din mission: Red din koloni på 100 bier og find et nyt sted at bygge hjem. På din rejse vil du møde udfordringer og svære valg. Men hvis du er smart, kan du måske sikre din kolonis fremtid!
@@ -11,6 +8,7 @@ Du får at vide, hvilke steder du kan gå til, når du har brug for det.
 Du skal tage valg eller svare på spørgsmål, der kan redde din koloni.
 For at svare på spørgsmål skal du vælge “a, b eller c”.
 Nogle haver er låste, og for at åbne dem skal du samle brugebare ting undervejs.
+hvis du i tilfælde svarer har du mulighed for at besvare spørgsmålet igen, men denne gang vil du miste dobbelt så mange bier som før.
 Held og lykke!
 
 Besvar dette testspørgsmål for at prøve at svare på et spørgsmål:
