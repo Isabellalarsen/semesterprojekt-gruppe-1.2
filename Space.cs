@@ -67,7 +67,7 @@ class Space : Node {
     }
   
     // If room has a question do the following
-    if(question!=null && !beenHere){
+    if(question!=null && question.CorrectAnswer==false){
       Console.WriteLine(question.QuestionText);
       Console.WriteLine("For at svare skal du trykke på a, b eller c");
       // ReadKey() reads the next key pressed on keyboard
@@ -82,9 +82,16 @@ class Space : Node {
       while(userAnswer !='a'&& userAnswer !='b'&& userAnswer !='c');
       if (userAnswer == question.QuestionAnswer){      
         Console.WriteLine("Korrekt! Du har ikke mistet nogen bier!");
+        question.CorrectAnswer = true;
       }  
       else {
+        if(beenHere){
+          question.BeesLost = question.BeesLost*2;
+        }
         bees.Bees = bees.Bees - question.BeesLost;
+        if(bees.Bees < 0){
+          bees.Bees = 0;
+        }
         Console.WriteLine($"Øv, det var ikke korrekt. Du har mistet {question.BeesLost} bier. Du har {bees.Bees} bier tilbage");
       }
     }
@@ -93,7 +100,7 @@ class Space : Node {
         SetBeenHere(true);
     }
     //Checks amount of paths and prints accordingly.
-    if (paths.Count > 0) {
+    if (paths.Count > 0 && bees.Bees > 0) {
       Console.WriteLine("Mulige veje:");
       foreach (String path in paths) {
         Console.WriteLine(" - "+path);
@@ -113,6 +120,7 @@ class Space : Node {
       else {
         Console.WriteLine(File.ReadAllText(@"./stories/100.txt"));
       }
+        Console.WriteLine("\nSkriv quit for at afslutte spillet.");
     }
   }
   
