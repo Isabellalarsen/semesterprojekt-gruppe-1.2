@@ -134,6 +134,7 @@ class Space : Node {
       return null;
     }
     if (nextroom.item == null || nextroom.question == null || nextroom.item.HoldingItem == true){
+      Console.Clear();
       return (Space?) (base.FollowEdge(direction));
     }
     else
