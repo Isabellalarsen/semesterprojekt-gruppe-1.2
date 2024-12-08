@@ -1,35 +1,44 @@
 /* Context class to hold all context relevant to a session.
  */
-
-class Context {
+namespace Domain {
+class Context
+{
   Space current;
   bool done = false;
-  
-  public Context (Space node) {
+
+  public Context(Space node)
+  {
     current = node;
   }
-  
-  public Space GetCurrent() {
+
+  public Space GetCurrent()
+  {
     return current;
   }
-  
-  public void Transition (string direction) {
+
+  public void Transition(string direction)
+  {
     Space? next = current.FollowEdge(direction);
-    if (next==null) {
+    if (next == null)
+    {
       Console.WriteLine("Prøv igen med et rum der findes");
-    } else {
+    }
+    else
+    {
       current.Goodbye();
       current = next;
       current.Welcome();
     }
   }
-  
-  public void MakeDone () {
+
+  public void MakeDone()
+  {
     done = true;
   }
-  
-  public bool IsDone () {
+
+  public bool IsDone()
+  {
     return done;
   }
 }
-
+}
