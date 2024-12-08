@@ -8,7 +8,7 @@ Du får at vide, hvilke steder du kan gå til, når du har brug for det.
 Du skal tage valg eller svare på spørgsmål, der kan redde din koloni.
 For at svare på spørgsmål skal du vælge “a, b eller c”.
 Nogle haver er låste, og for at åbne dem skal du samle brugebare ting undervejs.
-hvis du i tilfælde svarer har du mulighed for at besvare spørgsmålet igen, men denne gang vil du miste dobbelt så mange bier som før.
+Hvis du svarer forkert har du mulighed for at besvare spørgsmålet igen, men denne gang vil du miste dobbelt så mange bier som før.
 Du kan skrive "quit" for at afslutte spillet.
 Held og lykke!
 
